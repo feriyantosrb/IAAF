@@ -164,5 +164,3 @@ if pil_donbul==bulan_unik[3]:
     st.write(don_bul[2:3])
 if pil_donbul==bulan_unik[4]:
     st.write(don_bul[3:4])
-if pil_donbul==bulan_unik[5]:
-    st.write(don_bul[4:5])
