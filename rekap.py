@@ -42,11 +42,12 @@ for Jenis in Jenis_unik:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
     total_donasi.append(Nominal.sum())
 jenis_donasi = left_col.selectbox('Pilih jenis donatur: ',Jenis_unik)
-if Jenis_unik == Jenis_unik[0] :
-    dic_jen_tot = {'Jenis Donatur':Jenis_unik[0],'Total Donasi':total_donasi[0]}
-else :
-    dic_jen_tot = {'Jenis Donatur':Jenis_unik[1],'Total Donasi':total_donasi[1]}
-left_col.table(dic_jen_tot)
+
+x_ = df[df['Jenis']==jenis_donasi]['Jenis']
+y_ = df[df['Nominal']==jenis_donasi]['Nominal']
+
+dic_jen = {'Jenis Donatur':x_,'total donasi':y_}
+left_col.dataframe(dic_jen)
 
 #upper middle col
 #tujuan unik
