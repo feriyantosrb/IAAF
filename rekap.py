@@ -35,7 +35,7 @@ left_col, mid_col, right_col = st.columns(3)
 #upper left col
 #dict jenis unik, total donasi
 Jenis_unik = list(df['Jenis'].unique())
-pilih = st.selectbox('masukkan pilihan',Jenis_unik)
+pilih = left_col.selectbox('masukkan pilihan',Jenis_unik)
 total_donasi = []
 for Jenis in Jenis_unik:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
