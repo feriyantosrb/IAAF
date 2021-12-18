@@ -58,7 +58,7 @@ dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
 nama_jumnom = pd.DataFrame(dic_nama_jumnom)
 #print(nama_jumnom)
 choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
-for i in range(len(nama_unik)):
+for i in range(len(choose)):
     choose = nama_unik[i]
     nama_jumnom = nama_jumnom[i:i+1]
     st.write('iniliah jawabannnya',nama_jumnom)
