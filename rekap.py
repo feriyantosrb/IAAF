@@ -70,6 +70,5 @@ donasi_bulan = []
 for bulan in bulan_unik:
     sub_bulan = df[df['Bulan']==bulan]['Nominal'].astype(int)
     donasi_bulan.append(sub_bulan.sum())
-bulan = right_col.selectbox('Pilih Bulan: ',bulan_unik)
-dic_donasi_bulan={'Bulan':bulan,'Jumlah Donasi':donasi_bulan}
+dic_donasi_bulan={'Bulan':bulan_unik,'Jumlah Donasi':donasi_bulan}
 st.dataframe(dic_donasi_bulan)
