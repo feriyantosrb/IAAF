@@ -48,8 +48,7 @@ else :
     st.write(data[1:1])
 
 #upper right col
-#nama unik
-#dict nama unik, jumlah donasi
+#membuat nama unik
 nama_unik=list(df['Nama'].unique()) #nama unik
 jumlah_nominal = []
 for nama in nama_unik:
@@ -60,8 +59,8 @@ nama_jumnom = pd.DataFrame(dic_nama_jumnom)
 #print(nama_jumnom)
 choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
 for i in range(len(nama_unik)):
-    choose == nama_unik[i]
-    nama_jumnon==nama_jumnom[i:i+1]
+    choose = nama_unik[i]
+    nama_jumnom = nama_jumnom[i:i+1]
     break
 st.write('iniliah jawabannnya',nama_jumnom)
 
