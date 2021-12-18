@@ -45,7 +45,7 @@ data = pd.DataFrame(dic_jen_tot)
 if pilih == Jenis_unik [0]:
     st.write(data[0:1])
 else :
-    st.write(data[1:1])
+    st.write(data[1:])
 
 #upper right col
 #membuat nama unik
@@ -58,13 +58,12 @@ dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
 nama_jumnom = pd.DataFrame(dic_nama_jumnom)
 #print(nama_jumnom)
 choose = st.selectbox('pilih nama donatur',nama_unik)
-
-i=0
-while i < 32 :
+while i < len(choose) :
     choose = choose[i]
     nama_jumnom = nama_jumnom[i:i+1]
     print(nama_jumnom)
     i=i+1
+
 
 
 #bawah
