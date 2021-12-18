@@ -61,7 +61,6 @@ choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
 for i in range(len(nama_unik)):
     choose = nama_unik[i]
     nama_jumnom = nama_jumnom[i:i+1]
-    break
 st.write('iniliah jawabannnya',nama_jumnom)
 
 #bawah
