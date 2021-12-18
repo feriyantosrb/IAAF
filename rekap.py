@@ -38,15 +38,13 @@ left_col, mid_col, right_col = st.columns(3)
 #dict jenis unik, total donasi
 Jenis_unik = list(df['Jenis'].unique()) #2 jenis : DT dan DTT
 total_donasi = []
-for Jenis in Jenis_unik:
-    Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
-    total_donasi.append(Nominal.sum())
 jenis_donasi = left_col.selectbox('Pilih jenis donatur: ',Jenis_unik)
-
 x_ = df[df['Jenis']==jenis_donasi]['Jenis']
 y_ = df[df['Jenis']==jenis_donasi]['Nominal']
-
-dic_jen = {'Jenis Donatur':x_,'total donasi':y_}
+for Jenis in y_:
+    Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
+    total_donasi.append(Nominal.sum())
+dic_jen = {'Jenis Donatur':x_,'total donasi':total_donasi}
 left_col.dataframe(dic_jen)
 
 #upper middle col
