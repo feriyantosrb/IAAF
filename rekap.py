@@ -156,11 +156,13 @@ for bulan in bulan_unik:
 dic_donasi_bulan={'Bulan':bulan_unik,'Jumlah Donasi':donasi_bulan}
 don_bul = pd.DataFrame(dic_donasi_bulan)
 pil_donbul = st.selectbox('pilih bulan',bulan_unik)
-if pil_donbul==bulan_unik[1]:
+if pil_donbul==bulan_unik[0]:
     st.write(don_bul[0:1])
-if pil_donbul==bulan_unik[2]:
+if pil_donbul==bulan_unik[1]:
     st.write(don_bul[1:2])
-if pil_donbul==bulan_unik[3]:
+if pil_donbul==bulan_unik[2]:
     st.write(don_bul[2:3])
-if pil_donbul==bulan_unik[4]:
+if pil_donbul==bulan_unik[3]:
     st.write(don_bul[3:4])
+if pil_donbul==bulan_unik[4]:
+    st.write(don_bul[4:5])
