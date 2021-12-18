@@ -46,7 +46,7 @@ if Jenis_unik == Jenis_unik[0] :
     dic_jen_tot = {'Jenis Donatur':Jenis_unik[0],'Total Donasi':total_donasi[0]}
 else :
     dic_jen_tot = {'Jenis Donatur':Jenis_unik[1],'Total Donasi':total_donasi[1]}
-left_col.dataframe(pd.DataFrame(dic_jen_tot))
+left_col.dataframe(dic_jen_tot)
 
 #upper middle col
 #tujuan unik
