@@ -62,6 +62,7 @@ for i in range(len(nama_unik)):
     choose = nama_unik[i]
     nama_jumnom = nama_jumnom[i:i+1]
     st.write('iniliah jawabannnya',nama_jumnom)
+    i=i+1
 
 #bawah
 #dic bulan unik, jumlah donasi (Donatur Tetap)
