@@ -42,12 +42,10 @@ for Jenis in Jenis_unik:
     total_donasi.append(Nominal.sum())
 dic_jen_tot ={'Jenis Donasi':Jenis_unik,'total donasi':total_donasi}
 data = pd.DataFrame(dic_jen_tot)
-i=0
-while i < 2 :
-    pilih == Jenis_unik [i]
-    i=i+1
-if pilih == Jenis_unik [i]:
-    st.write('Jumlah Donasi dari ',pilih,' adalah ',data[i:1])
+if pilih == Jenis_unik [0]:
+    left_col.markdown('Jumlah Donasi dari ',pilih,' adalah ',data[0:1])
+else :
+    left_col.markdown('Jumlah Donasi dari ',pilih,' adalah ',data[1:1])
 
 #upper right col
 #nama unik
