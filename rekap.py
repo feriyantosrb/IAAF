@@ -34,23 +34,6 @@ config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui",
 
 left_col, mid_col, right_col = st.columns(3)
 
-'''
-#dic nama semua, nominal semua
-nama_semua = df['Nama'].tolist() #daftar semua nama
-nominal_semua = df['Nominal'].tolist() #daftar semua nominal
-dic_nam_nom={'Nama':nama_semua,'Nominal':nominal_semua} #dict semua nama, nominal
-'''
-
-'''
-#dict nama unik, jumlah donasi
-nama_unik=list(df['Nama'].unique()) #nama unik
-jumlah_nominal = []
-for nama in nama_unik:
-    sub_nom = df[df['Nama']==nama]['Nominal'].astype(int)
-    jumlah_nominal.append(sub_nom.sum()) 
-dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
-'''
-
 #upper left col
 #dict jenis unik, total donasi
 Jenis_unik = list(df['Jenis'].unique()) #2 jenis : DT dan DTT
@@ -59,7 +42,7 @@ for Jenis in Jenis_unik:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
     total_donasi.append(Nominal.sum()) 
 
-jenis_donasi = left_col.selectox('Pilih jenis donatur: ',Jenis_unik)
+jenis_donasi = left_col.selectbox('Pilih jenis donatur: ',Jenis_unik)
 
 dic_jen_tot ={'Jenis Donasi':jenis_donasi,'total donasi':total_donasi} #dict jenis donasi, total donasi
 left_col.dataframe(dic_jen_tot)
