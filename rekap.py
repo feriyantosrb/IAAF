@@ -26,10 +26,11 @@ st.title('DONASI IAAF')
 st.header('Okeee')
 st.dataframe(df)
 
-
+'''
 #Konfigurasi Pengaturan
 config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui", ('Deskripsi', 'Rekapitulasi', 'Kontak Kami'))
 #if......
+'''
 
 left_col, mid_col, right_col = st.columns(3)
 
@@ -131,18 +132,18 @@ for tujuan in tujuan_unik:
     donasi_tujuan.append(sub_tujuan.sum())
 dic_donasi_tujuan={'Tujuan':tujuan_unik,'Jumlah donasi':donasi_tujuan}
 don_tu = pd.DataFrame(dic_donasi_tujuan)
-pil_dontu = st.selectbox('pilih alamat donasi tujuan',donasi_tujuan)
-if pil_dontu == donasi_tujuan[0]:
+pil_dontu = st.selectbox('pilih alamat donasi tujuan',tujuan_unik)
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[0:1])
-if pil_dontu == donasi_tujuan[0]:
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[1:2])
-if pil_dontu == donasi_tujuan[0]:
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[2:3])
-if pil_dontu == donasi_tujuan[0]:
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[3:4])
-if pil_dontu == donasi_tujuan[0]:
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[4:5])
-if pil_dontu == donasi_tujuan[0]:
+if pil_dontu == tujuan_unik[0]:
     st.write(don_tu[5:6])
 
 #bawah
