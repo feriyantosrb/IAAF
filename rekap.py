@@ -20,6 +20,8 @@ class csvHandler:
 ch_ = csvHandler('progres-donatur.csv')
 df = ch_.dataFrame
 
+st.set_page_config(layout="wide")
+
 st.title('DONASI IAAF')
 st.header('Okeee')
 st.table(df)
@@ -28,7 +30,8 @@ st.table(df)
 config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui",
      ('Deskripsi, Rekapitulasi, Kontak Kami'))
 #if......
-st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
+
+
 left_col, mid_col, right_col = st.columns(3)
 
 '''
