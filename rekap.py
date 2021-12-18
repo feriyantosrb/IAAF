@@ -41,17 +41,12 @@ for Jenis in Jenis_unik:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
     total_donasi.append(Nominal.sum())
 dic_jen_tot ={'Jenis Donasi':Jenis_unik,'total donasi':total_donasi}
-left_col.dataframe(dic_jen_tot)
-
-#upper middle col
-#tujuan unik
-tujuan_unik = list(df['Tujuan'].unique())
-donasi_tujuan = []
-for tujuan in tujuan_unik:
-    sub_tujuan = df[df['Tujuan']==tujuan]['Nominal'].astype(int)
-    donasi_tujuan.append(sub_tujuan.sum())
-dic_donasi_tujuan={'Tujuan':tujuan_unik,'Jumlah donasi':donasi_tujuan}
-mid_col.dataframe(dic_donasi_tujuan)
+data = pd.DataFrame(dic_jen_tot)
+s = data['total donasi']
+if pilih == Jenis_unik [0]:
+    st.write('Jumlah Donasi dari ',pilih,' adalah ',s[0:1])
+else :
+    st.write('Jumlah Donasi dari ',pilih,' adalah ',s[1:])
 
 #upper right col
 #nama unik
