@@ -24,7 +24,7 @@ st.set_page_config(layout="wide")
 
 st.title('DONASI IAAF')
 st.header('Okeee')
-st.table(df)
+st.dataframe(df)
 
 #Konfigurasi Pengaturan
 config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui", ('Deskripsi', 'Rekapitulasi', 'Kontak Kami'))
