@@ -43,8 +43,11 @@ for Jenis in Jenis_unik :
     total_donasi.append(Nominal.sum())
 pilihan = left_col.selectbox('pilih box',Jenis_unik)
 
-box = df[df['Jenis']==pilihan]['Nominal']
-dic = {'Jenis':box,'Total donasi':total_donasi}
+box = df[df['Nominal']==pilihan]
+for i in box :
+    Nominal_1 = df[df['Jenis']==i]['Nominal'].astype(int)
+    total_donasi.append(Nominal.sum())
+dic = {'Jenis':pilihan,'Total donasi':total_donasi}
 left_col.dataframe(dic)
 
 #upper middle col
