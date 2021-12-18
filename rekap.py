@@ -34,7 +34,7 @@ config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui",
 
 left_col, mid_col, right_col = st.columns(3)
 
-#upper left col
+##upper left col
 #dict jenis unik, total donasi
 Jenis_unik = list(df['Jenis'].unique()) #2 jenis : DT dan DTT
 total_donasi = []
@@ -44,7 +44,7 @@ y_ = df[df['Jenis']==jenis_donasi]['Nominal']
 for Jenis in x_:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
     total_donasi.append(Nominal.sum())
-dic_jen = {'Jenis Donatur':x_,'total donasi':total_donasi}
+dic_jen = {'Jenis Donatur':jenis_donasi,'total donasi':total_donasi}
 left_col.dataframe(dic_jen)
 
 #upper middle col
