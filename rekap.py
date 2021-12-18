@@ -58,7 +58,14 @@ for nama in nama_unik:
     sub_nom = df[df['Nama']==nama]['Nominal'].astype(int)
     jumlah_nominal.append(sub_nom.sum())
 dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
-right_col.dataframe(dic_nama_jumnom)
+nama_jumnom = pd.DataFrame(dic_nama_jumnom)
+#print(nama_jumnom)
+choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
+for i in range(len(nama_unik)):
+    choose == nama_unik[i]
+    nama_jumnon==nama_jumnom[i:i+1]
+    break
+st.write('iniliah jawabannnya',nama_jumnom)
 
 #bawah
 #dic bulan unik, jumlah donasi (Donatur Tetap)
