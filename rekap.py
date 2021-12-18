@@ -30,14 +30,15 @@ config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui",
 #if......
 st.set_page_config(layout="wide")  # this needs to be the first Streamlit command called
 left_col, mid_col, right_col = st.columns(3)
-#bagian a
-#upper left column
 
+'''
 #dic nama semua, nominal semua
 nama_semua = df['Nama'].tolist() #daftar semua nama
 nominal_semua = df['Nominal'].tolist() #daftar semua nominal
 dic_nam_nom={'Nama':nama_semua,'Nominal':nominal_semua} #dict semua nama, nominal
+'''
 
+'''
 #dict nama unik, jumlah donasi
 nama_unik=list(df['Nama'].unique()) #nama unik
 jumlah_nominal = []
@@ -45,6 +46,7 @@ for nama in nama_unik:
     sub_nom = df[df['Nama']==nama]['Nominal'].astype(int)
     jumlah_nominal.append(sub_nom.sum()) 
 dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
+'''
 
 #upper left col
 #dict jenis unik, total donasi
@@ -91,3 +93,4 @@ for bulan in bulan_unik:
     donasi_bulan.append(sub_bulan.sum())
 bulan = right_col.selectox('Pilih Bulan: ',bulan_unik)
 dic_donasi_bulan={'Bulan':bulan,'Jumlah Donasi':donasi_bulan}
+st.dataframe(dic_donasi_bulan)
