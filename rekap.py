@@ -44,7 +44,7 @@ for Jenis in Jenis_unik:
 jenis_donasi = left_col.selectbox('Pilih jenis donatur: ',Jenis_unik)
 
 x_ = df[df['Jenis']==jenis_donasi]['Jenis']
-y_ = df[df['Nominal']==jenis_donasi]['Nominal']
+y_ = df[df['Jenis']==jenis_donasi]['Nominal']
 
 dic_jen = {'Jenis Donatur':x_,'total donasi':y_}
 left_col.dataframe(dic_jen)
