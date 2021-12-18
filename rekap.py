@@ -27,28 +27,20 @@ st.header('Okeee')
 st.table(df)
 
 #Konfigurasi Pengaturan
-config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui",
-     ('Deskripsi, Rekapitulasi, Kontak Kami'))
+config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui", ('Deskripsi', 'Rekapitulasi', 'Kontak Kami'))
 #if......
-
 
 left_col, mid_col, right_col = st.columns(3)
 
 #upper left col
 #dict jenis unik, total donasi
-Jenis_unik = list(df['Jenis'].unique()) #2 jenis : DT dan DTT
+Jenis_unik = list(df['Jenis'].unique())
 total_donasi = []
-for Jenis in Jenis_unik :
+for Jenis in Jenis_unik:
     Nominal = df[df['Jenis']==Jenis]['Nominal'].astype(int)
     total_donasi.append(Nominal.sum())
-pilihan = left_col.selectbox('pilih box',Jenis_unik)
-
-box = df[df['Nominal']==pilihan]
-for i in box :
-    Nominal_1 = df[df['Jenis']==i]['Nominal'].astype(int)
-    total_donasi.append(Nominal.sum())
-dic = {'Jenis':pilihan,'Total donasi':total_donasi}
-left_col.dataframe(dic)
+dic_jen_tot ={'Jenis Donasi':Jenis_unik,'total donasi':total_donasi}
+left_col.dataframe(dic_jen_tot)
 
 #upper middle col
 #tujuan unik
@@ -57,8 +49,7 @@ donasi_tujuan = []
 for tujuan in tujuan_unik:
     sub_tujuan = df[df['Tujuan']==tujuan]['Nominal'].astype(int)
     donasi_tujuan.append(sub_tujuan.sum())
-tujuan = mid_col.selectox('Pilih Alamat Tujuan Donasi: ',tujuan_unik)
-dic_donasi_tujuan={'Tujuan':tujuan,'Jumlah donasi':donasi_tujuan}
+dic_donasi_tujuan={'Tujuan':tujuan_unik,'Jumlah donasi':donasi_tujuan}
 mid_col.dataframe(dic_donasi_tujuan)
 
 #upper right col
@@ -69,8 +60,7 @@ jumlah_nominal = []
 for nama in nama_unik:
     sub_nom = df[df['Nama']==nama]['Nominal'].astype(int)
     jumlah_nominal.append(sub_nom.sum())
-donatur = right_col.selectox('Pilih Nama Donatur: ',nama_unik)
-dic_nama_jumnom={'Nama':donatur,'Jumlah Donasi':jumlah_nominal}
+dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
 right_col.dataframe(dic_nama_jumnom)
 
 #bawah
@@ -80,6 +70,6 @@ donasi_bulan = []
 for bulan in bulan_unik:
     sub_bulan = df[df['Bulan']==bulan]['Nominal'].astype(int)
     donasi_bulan.append(sub_bulan.sum())
-bulan = right_col.selectox('Pilih Bulan: ',bulan_unik)
+bulan = right_col.selectbox('Pilih Bulan: ',bulan_unik)
 dic_donasi_bulan={'Bulan':bulan,'Jumlah Donasi':donasi_bulan}
 st.dataframe(dic_donasi_bulan)
