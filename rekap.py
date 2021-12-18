@@ -61,7 +61,7 @@ choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
 for i in range(len(nama_unik)):
     choose = nama_unik[i]
     nama_jumnom = nama_jumnom[i:i+1]
-st.write('iniliah jawabannnya',nama_jumnom)
+    st.write('iniliah jawabannnya',nama_jumnom)
 
 #bawah
 #dic bulan unik, jumlah donasi (Donatur Tetap)
