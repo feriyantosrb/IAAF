@@ -17,7 +17,7 @@ class csvHandler:
         for i in df:
             self.data[i]=df[i].tolist()
         self.dataFrame = df
-ch_ = csvHandler('progres-donatur.csv')
+ch_ = csvHandler('data-iaaf.csv')
 df = ch_.dataFrame
 
 st.set_page_config(layout="wide")
