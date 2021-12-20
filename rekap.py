@@ -36,6 +36,7 @@ for Jenis in Jenis_unik:
 dic_jen_tot ={'Jenis Donatur':Jenis_unik,'Total Donasi':total_donasi}
 jenis_total = pd.DataFrame(dic_jen_tot)
 
+locale.setlocale(locale.LC_ALL, 'in_ID')
 total_rp = locale.currency(sum(total_donasi), grouping=True).replace('+','')
 
 st.info('IAAF merukan program pengadaan beasiswa oleh para alumni/non alumni untuk membantu alumni Al-Uswah Boarding School untuk melanjutkan kuliah. Sebagai informasi al-uswah boarding school merupakan rintisan Boarding School yang diperuntukkan untuk anak-anak yatim/piatu/dhuafa berprestasi agar mampu melanjutkan pendidikan sampai tingkat menegah atas (SMA) dan membekali mereka dengan ilmu Agama Islam')
