@@ -67,7 +67,7 @@ def f_ ():
 def g_():
     datframe = nama_jumnom[f_():f_()+1]
     return datframe
-st.write(g_())
+left_col.write(g_())
 '''
 if choose == nama_unik[0]:
     st.write(nama_jumnom[0:1])
