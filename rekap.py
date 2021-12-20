@@ -1,11 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LinearRegression
-import plotly.graph_objects as go
-import plotly.express as px
-import matplotlib.pyplot as plt
-import json
+import locale
 from PIL import Image
 
 #start handler
@@ -26,15 +22,9 @@ st.title('Program Ikatan Alumni Al-Uswah Foundation')
 st.header('Rekapitulasi Update Donasi')
 
 #Konfigurasi Pengaturan
-config = st.sidebar.radio("Pilih bagian yang ingin Anda ketahui", ('Deskripsi', 'Rekapitulasi', 'Kontak Kami'))
-if config == 'Deskripsi':
-    st.write('ini adalah bagian deskripsi')
-if config == 'Rekapitulasi':
-    st.write('ini adalah bagian rekapitulasi')
-else:
-    st.write('ini adalah bagian kontak kami')
 
-left_col, right_col = st.columns(2)
+
+
 
 #upper left col
 #start jenis unik, total donasi
@@ -45,6 +35,14 @@ for Jenis in Jenis_unik:
     total_donasi.append(Nominal.sum())
 dic_jen_tot ={'Jenis Donatur':Jenis_unik,'Total Donasi':total_donasi}
 jenis_total = pd.DataFrame(dic_jen_tot)
+
+total_rp = locale.currency(sum(total_donasi), grouping=True).replace('+','')
+
+st.info('IAAF merukan program pengadaan beasiswa oleh para alumni/non alumni untuk membantu alumni Al-Uswah Boarding School untuk melanjutkan kuliah. Sebagai informasi al-uswah boarding school merupakan rintisan Boarding School yang diperuntukkan untuk anak-anak yatim/piatu/dhuafa berprestasi agar mampu melanjutkan pendidikan sampai tingkat menegah atas (SMA) dan membekali mereka dengan ilmu Agama Islam')
+st.succes('Total Donasi Sampai Saat Ini Rp :{}'.format(total_rp))
+
+
+left_col, right_col = st.columns(2)
 right_col.subheader('Nominal Donasi Berdasarkan Jenis Donasi')
 pilih_jenis = right_col.selectbox('Pilih Jenis Donatur',Jenis_unik)
 def a_ ():
@@ -125,5 +123,5 @@ right_col.write(h_())
 
 st.write()
 st.header('Summary')
-st.subheader('Total Donasi Sampai Saat Ini : Rp {}'.format(sum(total_donasi)))
+st.subheader('Total Donasi Sampai Saat Ini Rp :{}'.format(total_rp))
 st.dataframe(df)
