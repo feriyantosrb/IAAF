@@ -63,6 +63,7 @@ for nama in nama_unik:
     jumlah_nominal.append(sub_nom.sum())
 dic_nama_jumnom={'Nama Donatur':nama_unik,'Jumlah Donasi':jumlah_nominal}
 nama_jumnom = pd.DataFrame(dic_nama_jumnom)
+
 tulis_nama = []
 for i, nama in enumerate(nama_unik):
     tulis_nama.append(f"{str(i+1)}. {nama}\n")
@@ -94,10 +95,10 @@ right_col.write()
 right_col.subheader('Nominal Donasi Berdasarkan Alamat Donasi Tujuan')
 pil_dontu = right_col.selectbox('Pilih Alamat Donasi Tujuan',tujuan_unik)
 def e_ ():
-    e = nama_unik.index(choose)
+    e = tujuan_unik.index(pil_dontu)
     return e
 def f_():
-    f = nama_jumnom[e_():e_()+1]
+    f = don_tu[e_():e_()+1]
     return f
 right_col.write(f_())
 #finish tujuan, nominal
@@ -114,10 +115,10 @@ right_col.write()
 right_col.subheader('Nominal Donasi Berdasarkan Bulan')
 pil_donbul = right_col.selectbox('Pilih Bulan',bulan_unik)
 def g_ ():
-    g = nama_unik.index(choose)
+    g = bulan_unik.index(pil_donbul)
     return g
 def h_():
-    h = nama_jumnom[g_():g_()+1]
+    h = don_bul[g_():g_()+1]
     return h
 right_col.write(h_())
 
