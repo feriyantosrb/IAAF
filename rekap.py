@@ -61,20 +61,13 @@ dic_nama_jumnom={'Nama':nama_unik,'Jumlah Donasi':jumlah_nominal}
 nama_jumnom = pd.DataFrame(dic_nama_jumnom)
 #print(nama_jumnom)
 choose = st.selectbox('pilih nama donatur',nama_unik) # nama_unik[0],....
-a=0
-def f_ (a):
-    i=a
-    choose = nama_unik[i]
-    return choose
-def g_(a):
-    i=a
-    datframe = nama_jumnom[i:i+1]
+def f_ ():
+    a = nama_unik.index(choose)
+    return a
+def g_():
+    datframe = nama_jumnom[f_():f_()+1]
     return datframe
-
-for i in range(len(nama_unik)+1):
-    list_pil = f_
-    st.write(g_)
-    i=i+1
+st.write(g_())
 '''
 if choose == nama_unik[0]:
     st.write(nama_jumnom[0:1])
