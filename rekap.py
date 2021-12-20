@@ -125,4 +125,5 @@ right_col.write(h_())
 
 st.write()
 st.header('Summary')
+st.subheader('Total Donasi Sampai Saat Ini:{}'.format(sum(total_donasi)))
 st.dataframe(df)
