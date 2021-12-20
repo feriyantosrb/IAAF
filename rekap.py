@@ -45,6 +45,7 @@ for Jenis in Jenis_unik:
     total_donasi.append(Nominal.sum())
 dic_jen_tot ={'Jenis Donatur':Jenis_unik,'Total Donasi':total_donasi}
 jenis_total = pd.DataFrame(dic_jen_tot)
+right_col.subheader('Nominal Donasi Berdasarkan Jenis Donasi')
 pilih_jenis = right_col.selectbox('Pilih Jenis Donatur',Jenis_unik)
 def a_ ():
     a = Jenis_unik.index(pilih_jenis)
