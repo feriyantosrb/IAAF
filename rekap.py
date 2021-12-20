@@ -36,7 +36,7 @@ dic_jen_tot ={'Jenis Donatur':Jenis_unik,'Total Donasi':total_donasi}
 jenis_total = pd.DataFrame(dic_jen_tot)
 
 
-total_rp = "${:,.2f}".format(sum(total_donasi))
+total_rp = "Rp{:,.2f}".format(sum(total_donasi))
 
 st.info('IAAF merukan program pengadaan beasiswa oleh para alumni/non alumni untuk membantu alumni Al-Uswah Boarding School untuk melanjutkan kuliah. Sebagai informasi al-uswah boarding school merupakan rintisan Boarding School yang diperuntukkan untuk anak-anak yatim/piatu/dhuafa berprestasi agar mampu melanjutkan pendidikan sampai tingkat menegah atas (SMA) dan membekali mereka dengan ilmu Agama Islam')
 st.success('Total Donasi Sampai Saat Ini Rp :{}'.format(total_rp))
