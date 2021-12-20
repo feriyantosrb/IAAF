@@ -69,7 +69,7 @@ for i, nama in enumerate(nama_unik):
 tulis_nama = ' '.join(map(str, tulis_nama))
 
 left_col.subheader('Daftar Nama Donatur')
-left_col.dataframe(tulis_nama)
+left_col.write(tulis_nama)
 
 right_col.subheader('Nominal Donasi Berdasarkan Donatur')
 choose = right_col.selectbox('Pilih Nama Donatur',nama_unik) # nama_unik[0],....
