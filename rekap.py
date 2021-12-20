@@ -17,14 +17,12 @@ df = ch_.dataFrame
 
 st.set_page_config(layout="wide")
 
-st.title('Program Ikatan Alumni Al-Uswah Foundation')
-st.header('Rekapitulasi Update Donasi')
+col1,col2,col3=st.columns([1,5,1])
+
+col2.title('Program Ikatan Alumni Al-Uswah Foundation')
 image = Image.open('crop.png')
-st.image(image)
-#Konfigurasi Pengaturan
-
-
-
+col2.image(image)
+col2.header('Rekapitulasi Update Donasi')
 
 #upper left col
 #start jenis unik, total donasi
