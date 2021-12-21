@@ -17,7 +17,7 @@ df = ch_.dataFrame
 
 st.set_page_config(layout="wide")
 
-col1,col2,col3=st.columns([1,5,0])
+col1,col2,col3=st.columns([1,10,1])
 
 col2.title('Program Ikatan Alumni Al-Uswah Foundation')
 image = Image.open('crop.png')
