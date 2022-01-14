@@ -40,7 +40,7 @@ st.success('Total Donasi Sampai Saat Ini : {}'.format(total_rp))
 
 
 left_col, right_col = st.columns(2)
-right_col.subheader('Nominal Donasi Berdasarkan Jenis Donasi')
+right_col.subheader('Jumlah Donasi Berdasarkan Jenis Donatur')
 pilih_jenis = right_col.selectbox('Pilih Jenis Donatur',Jenis_unik)
 def a_ ():
     a = Jenis_unik.index(pilih_jenis)
@@ -68,7 +68,7 @@ tulis_nama = ' '.join(map(str, tulis_nama))
 left_col.subheader('Daftar Nama Donatur')
 left_col.write(tulis_nama)
 
-right_col.subheader('Nominal Donasi Berdasarkan Donatur')
+right_col.subheader('Jumlah Donasi Berdasarkan Donatur')
 choose = right_col.selectbox('Pilih Nama Donatur',nama_unik) # nama_unik[0],....
 def c_ ():
     c = nama_unik.index(choose)
@@ -88,8 +88,8 @@ for tujuan in tujuan_unik:
 dic_donasi_tujuan={'Alamat Donasi Tujuan':tujuan_unik,'Nominal':donasi_tujuan}
 don_tu = pd.DataFrame(dic_donasi_tujuan)
 right_col.write()
-right_col.subheader('Nominal Donasi Berdasarkan Alamat Donasi Tujuan')
-pil_dontu = right_col.selectbox('Pilih Alamat Donasi Tujuan',tujuan_unik)
+right_col.subheader('Jumlah Donasi Berdasarkan Alamat Tujuan Donasi')
+pil_dontu = right_col.selectbox('Pilih Alamat Tujuan Donasi',tujuan_unik)
 def e_ ():
     e = tujuan_unik.index(pil_dontu)
     return e
@@ -108,7 +108,7 @@ for bulan in bulan_unik:
 dic_donasi_bulan={'Bulan':bulan_unik,'Nominal':donasi_bulan}
 don_bul = pd.DataFrame(dic_donasi_bulan)
 right_col.write()
-right_col.subheader('Nominal Donasi Berdasarkan Bulan')
+right_col.subheader('Jumlah Donasi Berdasarkan Bulan')
 pil_donbul = right_col.selectbox('Pilih Bulan',bulan_unik)
 def g_ ():
     g = bulan_unik.index(pil_donbul)
