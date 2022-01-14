@@ -39,7 +39,7 @@ st.info('IAAF merukan program pengadaan beasiswa oleh para alumni/non alumni unt
 st.success('Total Donasi Sampai Saat Ini : {}'.format(total_rp))
 
 
-left_col, right_col = st.columns(2)
+left_col, right_col = st.columns([1,2])
 right_col.subheader('Jumlah Donasi Berdasarkan Jenis Donatur')
 pilih_jenis = right_col.selectbox('Pilih Jenis Donatur',Jenis_unik)
 def a_ ():
