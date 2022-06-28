@@ -6,7 +6,7 @@ Donatur Tetap,Setiyanto,DT004,September,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,September,50000,BRI Mamet
 Donatur Tetap,Bu Estu,DT006,September,50000,BRI Mamet
 Donatur Tetap,Bu Ernawati,DT007,September,50000,BRI Mamet
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,September,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,September,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,September,25000,OVO Yuan
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,September,500000,OVO Yuan
 Donatur Tetap,Bu Siti Abibah,DT011,September,50000,BRI Mamet
@@ -18,7 +18,7 @@ Donatur Tetap,Setiyanto,DT004,Oktober,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,Oktober,50000,BRI Mamet
 Donatur Tetap,Bu Estu,DT006,Oktober,50000,BRI Mamet
 Donatur Tetap,Bu Ernawati,DT007,Oktober,50000,BRI Mamet
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Oktober,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Oktober,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,Oktober,25000,OVO Yuan
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,Oktober,500000,OVO Yuan
 Donatur Tetap,Bu Siti Abibah,DT011,Oktober,50000,BRI Mamet
@@ -30,7 +30,7 @@ Donatur Tetap,Setiyanto,DT004,November,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,November,50000,BRI Mamet
 Donatur Tetap,Bu Estu,DT006,November,50000,BRI Mamet
 Donatur Tetap,Bu Ernawati,DT007,November,50000,BRI Mamet
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,November,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,November,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,November,25000,Dana Umi
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,November,500000,OVO Yuan
 Donatur Tetap,Bu Siti Abibah,DT011,November,50000,BRI Mamet
@@ -42,7 +42,7 @@ Donatur Tetap,Setiyanto,DT004,Desember,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,Desember,50000,BRI Mamet
 Donatur Tetap,Bu Estu,DT006,Desember,50000,BRI Mamet
 Donatur Tetap,Bu Ernawati,DT007,Desember,50000,BRI Mamet
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Desember,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Desember,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,Desember,25000,Dana Umi
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,Desember,500000,BRI Mamet
 Donatur Tetap,Bu Siti Abibah,DT011,Desember,50000,BRI Mamet
@@ -54,23 +54,23 @@ Donatur Tetap,Setiyanto,DT004,Januari,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,Januari,50000,BRI Mamet
 Donatur Tetap,Bu Estu,DT006,Januari,50000,BRI Mamet
 Donatur Tetap,Bu Ernawati,DT007,Januari,50000,BRI Mamet
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Januari,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Januari,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,Januari,25000,OVO Yuan
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,Januari,500000,BRI Mamet
 Donatur Tetap,Bu Siti Abibah,DT011,Januari,50000,BRI Mamet
 Donatur Tetap,Hardianto Nugroho,DT012,Januari,25000,OVO Yuan
-Donatur Tetap,Feriyanto,DT001,Februari,,
+Donatur Tetap,Feriyanto,DT001,Februari,0,
 Donatur Tetap,Angger Damar Riawan,DT002,Februari,25000,Dana Umi
-Donatur Tetap,Husaini Damar Mahendra,DT003,Februari,,
+Donatur Tetap,Husaini Damar Mahendra,DT003,Februari,0,
 Donatur Tetap,Setiyanto,DT004,Februari,50000,BRI Mamet
 Donatur Tetap,Beny Sunaryo,DT005,Februari,50000,Cash Tri
 Donatur Tetap,Bu Estu,DT006,Februari,50000,Cash Tri
 Donatur Tetap,Bu Ernawati,DT007,Februari,50000,Cash Tri
-Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Februari,,
+Donatur Tetap,M. Wijdaan 'Ainul Yaqin,DT008,Februari,0,
 Donatur Tetap,Nafika Cahya Ningrum,DT009,Februari,25000,OVO Yuan
 Donatur Tetap,Anas Nur Ikhsanuddin,DT010,Februari,500000,BRI Mamet
 Donatur Tetap,Bu Siti Abibah,DT011,Februari,50000,BRI Mamet
-Donatur Tetap,Hardianto Nugroho,DT012,Februari,,
+Donatur Tetap,Hardianto Nugroho,DT012,Februari,0,
 Donatur Tidak Tetap,Irfan Nugroho,DTT001,Donatur Tidak Tetap,200000,BRI Mamet
 Donatur Tidak Tetap,Yusak Eko Priambodo,DTT002,Donatur Tidak Tetap,200000,BRI Mamet
 Donatur Tidak Tetap,Romiyati,DTT003,Donatur Tidak Tetap,100000,BRI Mamet
